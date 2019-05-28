@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>React</title>
+  </head>
+
+  <body>
+    <div id="container"></div>
+
+    <!-- USING CDN VERSION OF REACT HERE -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+
+    <script type="text/babel">
+      let container = document.getElementById("container");
+
+      // class Share extends React.Component {
+      //   render() {
+      //     return (
+      //       <div>
+      //         <a href={this.props.url} target="_blank" title={this.props.title}>
+      //           My website
+      //         </a>
+      //       </div>
+      //     );
+      //   }
+      // }
+
+      // using spread operator:
+      class Share extends React.Component {
+        render() {
+          return (
+            <div>
+              <a {...this.props} target="_blank">
+                Visit {this.props.title}
+              </a>
+            </div>
+          );
+        }
+      }
+
+      let address = "http://www.polariscoding.com";
+      let titleName = "My Site";
+
+      // ReactDOM.render(<Share url={address} title={titleName} />, container);
+
+      // using spread operator:
+      ReactDOM.render(<Share href={address} title={titleName} />, container);
+    </script>
+  </body>
+</html>
