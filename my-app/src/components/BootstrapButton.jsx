@@ -20,6 +20,18 @@ class BootstrapButton extends Component {
     })
   }
 
+  componentWillUpdate(newProps, newState) {
+    console.log("componentWillUpdate() is called before the render() method");
+    console.log("NewProps of Button:", newProps); //this will be "null" as no props are chanigng
+    console.log("NewState of Button:", newState);     
+  }
+
+  componentDidUpdate(prevProps, prevState){
+    console.log("ComponentDidUpdate() is called after the render() method");
+    console.log("prevProps:", prevProps); //this will be "null" as no props are chanigng   
+    console.log("prevState:", prevState);        
+  }
+
   render() {
     return (
       <div className="App">
@@ -48,6 +60,14 @@ class Logger extends Component {
     console.log("componentWillReceiveProps() is triggered");
     // this shows that it gets triggered everytime props (<Logger time={...) is changed
     console.log("New Props that were received:", newProps);    
+  }
+
+  shouldComponentUpdate(newProps, newState){
+    console.log("shouldComponentUpdate() is triggered");   
+    // console.log("New Props", newProps);     // this prints the countProp
+    // console.log("New State", newState);     // this print "null"
+    // return true; // when true, this triggers, AND the countProp changes/gets updated
+    return false; // when false, this still triggers, but the countProp does not change/get updated
   }
 
   render() {
