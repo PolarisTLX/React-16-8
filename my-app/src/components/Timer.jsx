@@ -24,7 +24,7 @@
 //   }
   
 // converted to functional component with useState
-import React, { useState } from 'react'
+import React, { Component, useState } from 'react'
 
 const Timer = props => {
 
@@ -45,6 +45,5 @@ const Timer = props => {
     </div>
   )
 }
-
 
 export default Timer;

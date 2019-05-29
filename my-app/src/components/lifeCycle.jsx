@@ -18,10 +18,11 @@ class LifeCycle extends Component {
   render() {
     return(
       <div className="App">
-        <h1>"LifeCycle" Component Mounted</h1>
+        <h1>"LifeCycle" Component Mounted</h1>        
       </div>
     );
   }  
 }
 
 export default LifeCycle;
+

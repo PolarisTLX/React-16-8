@@ -30,6 +30,8 @@ class BootstrapButton extends Component {
         >
           {this.state.message}
         </button>
+        <br/>
+        <Logger countProp={this.state.counter} />
         <p>{this.state.value}</p>
       </div>
     );
@@ -38,3 +40,20 @@ class BootstrapButton extends Component {
 
 
 export default BootstrapButton;
+
+// extra component, not to be exported, but to be used in the existing component above:
+class Logger extends Component {
+
+  componentWillReceiveProps(newProps) {
+    console.log("componentWillReceiveProps() is triggered");
+    // this shows that it gets triggered everytime props (<Logger time={...) is changed
+    console.log("New Props that were received:", newProps);    
+  }
+
+  render() {
+    // return ( 
+    //   <div>Logger Component</div>
+    // );
+    return this.props.countProp;
+  }
+}
