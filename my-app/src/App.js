@@ -4,6 +4,7 @@ import './App.css';
 import FruitList from './components/fruitList';
 import Timer from './components/Timer';
 import BootstrapButton from './components/BootstrapButton';
+import Box from "./components/functionComponent"
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <h1>Hello World</h1>
       <FruitList fruits={["Mango", "Banana", "Pineapple"]}/>
       <Timer/> 
-      <BootstrapButton me="Props"/>
+      <BootstrapButton/>
+      <Box me="words being passed"/>
     </div>
   );
 }
