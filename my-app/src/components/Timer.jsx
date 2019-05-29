@@ -1,18 +1,17 @@
 // import React, { Component } from 'react'
-import React, { useState } from 'react'
 
 // class Timer extends Component {
 //   state = {
 //     date: new Date()
 //   };
-
+  
 //   callMe() {
 //     setInterval(() => {      
 //       // this.props.date = new Date();  // properties are immutable
 //       this.setState({ date: new Date()});
 //     }, 1000);
 //   }
-
+  
 //   render() {
 //     return (
 //       <div className="App">
@@ -21,10 +20,12 @@ import React, { useState } from 'react'
 //         { this.callMe() }
 //       </div>
 //      );
+//     }
 //   }
-// }
-
+  
 // converted to functional component with useState
+import React, { useState } from 'react'
+
 const Timer = props => {
 
   const [date, setDate] = useState([]);
