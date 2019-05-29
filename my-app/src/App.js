@@ -4,7 +4,8 @@ import './App.css';
 import FruitList from './components/fruitList';
 import Timer from './components/Timer';
 import BootstrapButton from './components/BootstrapButton';
-import Box from "./components/functionComponent"
+import Box from "./components/functionComponent";
+import LifeCycle from "./components/lifeCycle";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Timer/> 
       <BootstrapButton/>
       <Box me="words being passed"/>
+      <LifeCycle/>
     </div>
   );
 }
