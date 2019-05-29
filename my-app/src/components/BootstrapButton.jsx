@@ -32,6 +32,10 @@ class BootstrapButton extends Component {
     console.log("prevState:", prevState);        
   }
 
+  componentWillUnmount() {
+    console.log("componentWillUnMount() triggered");    
+  }
+
   render() {
     return (
       <div className="App">
@@ -66,8 +70,8 @@ class Logger extends Component {
     console.log("shouldComponentUpdate() is triggered");   
     // console.log("New Props", newProps);     // this prints the countProp
     // console.log("New State", newState);     // this print "null"
-    // return true; // when true, this triggers, AND the countProp changes/gets updated
-    return false; // when false, this still triggers, but the countProp does not change/get updated
+    // return false; // when false, this still triggers, but the countProp does not change/get updated
+    return true; // when true, this triggers, AND the countProp changes/gets updated
   }
 
   render() {

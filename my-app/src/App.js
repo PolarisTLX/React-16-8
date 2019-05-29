@@ -6,6 +6,7 @@ import Timer from './components/Timer';
 import BootstrapButton from './components/BootstrapButton';
 import Box from "./components/functionComponent";
 import LifeCycle from "./components/lifeCycle";
+import EventsComponent from './components/EventsComponent';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <BootstrapButton/>
       <Box me="words being passed"/>
       <LifeCycle/>
+      <EventsComponent/>
     </div>
   );
 }
